@@ -30,8 +30,32 @@ public class Product extends Base {
         this.defaultPrice = defaultPrice;
     }
 
+    float getDefaultPrice() {
+        return defaultPrice;
+    }
+
     void setDefaultCurrency(Currency defaultCurrency) {
         this.defaultCurrency = defaultCurrency;
+    }
+
+    Currency getDefaultCurrency() {
+        return defaultCurrency;
+    }
+
+    void setProductCategory(ProductCategory productCategory) {
+        this.productCategory = productCategory;
+    }
+
+    ProductCategory getProductCategory() {
+        return productCategory;
+    }
+
+    void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
+    }
+
+    Supplier getSupplier() {
+        return supplier;
     }
 
 }
