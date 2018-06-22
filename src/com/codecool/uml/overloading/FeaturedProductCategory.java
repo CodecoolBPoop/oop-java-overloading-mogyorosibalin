@@ -1,5 +1,5 @@
 package com.codecool.uml.overloading;
 
-public class FeaturedProductCategory extends Product {
+public class FeaturedProductCategory extends ProductCategory {
 
 }
