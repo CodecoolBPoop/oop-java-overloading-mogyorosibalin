@@ -15,4 +15,10 @@ public class Supplier extends Base {
         setDescription(description);
     }
 
+    public String toString() {
+        return String.format(
+            "id:%s,name:%s,description:%s",
+            getId(), getName(), getDescription()
+        );
+    }
 }
