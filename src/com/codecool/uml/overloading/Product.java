@@ -78,4 +78,11 @@ public class Product extends Base {
         return productFiltered;
     }
 
+    public String toString() {
+        return String.format(
+            "id:%s,name:%s,defaultPrice:%f,defaultCurrency:%s,productCategory:%s,supplier:%s",
+            getId(), getName(), getDefaultPrice(), getDefaultCurrency(), productCategory.getName(), supplier.getName()
+        );
+    }
+
 }
