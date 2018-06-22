@@ -1,5 +1,7 @@
 package com.codecool.uml.overloading;
 
+import java.util.List;
+
 public class Supplier extends Base {
     static int supplierCount = 0;
 
@@ -13,6 +15,10 @@ public class Supplier extends Base {
         setId(supplierCount++);
         setName(name);
         setDescription(description);
+    }
+
+    List<Product> getProducts() {
+        return Product.getAllProductsBy(this);
     }
 
     public String toString() {
