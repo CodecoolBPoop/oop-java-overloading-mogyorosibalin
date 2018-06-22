@@ -58,4 +58,24 @@ public class Product extends Base {
         return supplier;
     }
 
+    List<Product> getAllProductsBy(ProductCategory productCategory) {
+        List<Product> productFiltered = new ArrayList<>();
+        for (Product product : productList) {
+            if (product.productCategory.getName().equals(productCategory.getName())) {
+                productFiltered.add(product);
+            }
+        }
+        return productFiltered;
+    }
+
+    List<Product> getAllProductsBy(Supplier supplier) {
+        List<Product> productFiltered = new ArrayList<>();
+        for (Product product : productList) {
+            if (product.supplier.getName().equals(supplier.getName())) {
+                productFiltered.add(product);
+            }
+        }
+        return productFiltered;
+    }
+
 }

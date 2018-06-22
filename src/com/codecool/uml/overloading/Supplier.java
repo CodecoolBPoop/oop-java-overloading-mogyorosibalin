@@ -1,5 +1,5 @@
 package com.codecool.uml.overloading;
 
-public class Supplier {
+public class Supplier extends Base {
 
 }
