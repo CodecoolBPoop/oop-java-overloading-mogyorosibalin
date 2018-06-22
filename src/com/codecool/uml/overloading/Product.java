@@ -12,18 +12,22 @@ public class Product extends Base {
     Currency defaultCurrency;
     ProductCategory productCategory;
     Supplier supplier;
-    List<Product> productList = new ArrayList<>();
+    static List<Product> productList = new ArrayList<>();
 
     Product() {
+        setId(itemCount++);
         setName("");
         setDefaultPrice(0);
         setDefaultCurrency(Currency.getInstance(Locale.US));
+        productList.add(this);
     }
 
     Product(String name, float defaultPrice, Currency defaultCurrency) {
+        setId(itemCount++);
         setName(name);
         setDefaultPrice(defaultPrice);
         setDefaultCurrency(defaultCurrency);
+        productList.add(this);
     }
 
     void setDefaultPrice(float defaultPrice) {
@@ -58,7 +62,7 @@ public class Product extends Base {
         return supplier;
     }
 
-    List<Product> getAllProductsBy(ProductCategory productCategory) {
+    static List<Product> getAllProductsBy(ProductCategory productCategory) {
         List<Product> productFiltered = new ArrayList<>();
         for (Product product : productList) {
             if (product.productCategory.getName().equals(productCategory.getName())) {
@@ -68,7 +72,7 @@ public class Product extends Base {
         return productFiltered;
     }
 
-    List<Product> getAllProductsBy(Supplier supplier) {
+    static List<Product> getAllProductsBy(Supplier supplier) {
         List<Product> productFiltered = new ArrayList<>();
         for (Product product : productList) {
             if (product.supplier.getName().equals(supplier.getName())) {

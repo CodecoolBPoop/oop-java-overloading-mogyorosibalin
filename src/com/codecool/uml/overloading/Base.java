@@ -9,6 +9,10 @@ public abstract class Base {
         return id;
     }
 
+    void setId(int id) {
+        this.id = id;
+    }
+
     String getName() {
         return name;
     }
