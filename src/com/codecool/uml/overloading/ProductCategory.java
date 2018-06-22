@@ -1,5 +1,7 @@
 package com.codecool.uml.overloading;
 
+import java.util.List;
+
 public class ProductCategory extends Base {
     static int productCategoryCount = 0;
 
@@ -25,5 +27,16 @@ public class ProductCategory extends Base {
 
     String getDepartment() {
         return department;
+    }
+
+    List<Product> getProducts() {
+        return Product.getAllProductsBy(this);
+    }
+
+    public String toString() {
+        return String.format(
+                "id:%s,name:%s,department:%s,description:%s",
+                getId(), getName(), getDepartment(), getDescription()
+        );
     }
 }
